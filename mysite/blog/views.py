@@ -1,9 +1,14 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post, Comment
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from taggit.models import Tag
 
-def post_list(request):
+def post_list(request, tag_slug = None):
     posts = Post.published.all()
+    tag = None
+    if tag_slug:
+        tag = get_object_or_404(Tag, slug=tag_slug)
+        posts = posts.filter(tags__in=[tag])
     paginator = Paginator(posts, 3)
     page_number = request.GET.get('page', 1)
     
@@ -14,7 +19,7 @@ def post_list(request):
     except EmptyPage:
         paged_posts = paginator.page(paginator.num_pages)
 
-    return render(request, 'blog/post/list.html', {'posts': paged_posts})
+    return render(request, 'blog/post/list.html', {'posts': paged_posts, 'tag': tag})
 
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(Post,
