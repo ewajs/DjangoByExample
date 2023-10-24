@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  dj4be_blog_db:
+    image: postgres:13.1-alpine
+    volumes:
+      - dj4be_blog_data:/var/lib/postgresql/data
+    restart: always
+    env_file:
+      - ./db.env
+    ports:
+      - "5432:5432"
+
+volumes:
+  dj4be_blog_data:
