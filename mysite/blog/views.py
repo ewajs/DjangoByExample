@@ -1,8 +1,17 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from taggit.models import Tag
+from django.core.mail import send_mail
+
+from django.views.generic import ListView
+from django.views.decorators.http import require_POST
+
+from django.contrib.postgres.search import SearchVector
 from django.db.models import Count
+from .models import Post
+from taggit.models import Tag
+
+from .forms import EmailPostForm, CommentForm, SearchForm
+
 
 def post_list(request, tag_slug = None):
     posts = Post.published.all()
@@ -21,6 +30,16 @@ def post_list(request, tag_slug = None):
         paged_posts = paginator.page(paginator.num_pages)
 
     return render(request, 'blog/post/list.html', {'posts': paged_posts, 'tag': tag})
+
+# Class based view example of Posts List
+class PostListView(ListView):
+    """
+    Alternative post list view
+    """
+    queryset = Post.published.all()
+    context_object_name = 'posts'
+    paginate_by = 3
+    template_name = 'blog/post/list.html'
 
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(Post,
@@ -41,9 +60,6 @@ def post_detail(request, year, month, day, post):
     similar_posts = similar_posts.order_by('-same_tags','-publish')[:4]
     return render(request,'blog/post/detail.html', 
                   {'post': post, 'comments': comments, 'form': form, 'similar_posts': similar_posts})
-
-from .forms import EmailPostForm, CommentForm
-from django.core.mail import send_mail
 
 def post_share(request, post_id):
     # Retrieve post by id
@@ -67,8 +83,6 @@ def post_share(request, post_id):
     return render(request, 'blog/post/share.html', {'post': post,'form': form, 'sent': sent})
 
 
-from django.views.decorators.http import require_POST
-
 @require_POST
 def post_comment(request, post_id):
     post = get_object_or_404(Post, id=post_id, status=Post.Status.PUBLISHED)
@@ -85,13 +99,14 @@ def post_comment(request, post_id):
 
     return render(request, 'blog/post/comment.html',{'post': post,'form': form, 'comment': comment})
 
-# Class based view example of Posts List
-from django.views.generic import ListView
-class PostListView(ListView):
-    """
-    Alternative post list view
-    """
-    queryset = Post.published.all()
-    context_object_name = 'posts'
-    paginate_by = 3
-    template_name = 'blog/post/list.html'
+def post_search(request):
+    form = SearchForm()
+    query = None
+    results = []
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+    if form.is_valid():
+        query = form.cleaned_data['query']
+        results = Post.published.annotate(search=SearchVector('title', 'body')).filter(search=query)
+
+    return render(request, 'blog/post/search.html', {'form': form, 'query': query, 'results': results})
