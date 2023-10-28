@@ -163,3 +163,6 @@ dmypy.json
 cython_debug/
 
 */fixtures/*
+
+cert.crt
+cert.key
