@@ -20,4 +20,5 @@ urlpatterns = [
     # # # Single include for all views using default urls of auth_views
     path('', include('django.contrib.auth.urls')),
     path('', views.dashboard, name='dashboard'),
+    path('register/', views.register, name='register'),
 ]
