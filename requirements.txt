@@ -5,3 +5,4 @@ typing_extensions==4.8.0
 django-taggit==3.0.0
 markdown==3.4.1
 psycopg2-binary==2.9.3
+Pillow==9.2.0
