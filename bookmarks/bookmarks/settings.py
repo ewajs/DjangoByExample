@@ -144,6 +144,19 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.google.GoogleOAuth2',
 ]
 
+SOCIAL_AUTH_PIPELINE = [
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.auth_allowed',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.user.get_username',
+    'social_core.pipeline.user.create_user',
+    'account.authentication.create_profile', # Custom pipeline step to create Profile in DB
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+]
+
 # Login URLs
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
