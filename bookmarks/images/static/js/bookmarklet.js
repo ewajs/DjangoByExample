@@ -38,8 +38,29 @@ function bookmarkletLaunch() {
             const imageFound = document.createElement('img');
             imageFound.src = image.src;
             imagesFound.append(imageFound);
+            // Add event listener (in book, handled in a separate loop below)
+            imageFound.addEventListener('click', () => {
+                bookmarklet.style.display = 'none';
+                const params = new URLSearchParams({url: imageFound.src, title: document.title});
+                const url = `${siteUrl}images/create/?${params.toString()}`;
+                window.open(url, '_blank');
+            });
         }
     });
+
+    // Code from the book, commented out, solved in the same loop above
+    // imagesFound.querySelectorAll('img').forEach(image => {
+    //     image.addEventListener('click', function(event){
+    //         imageSelected = event.target;
+    //         bookmarklet.style.display = 'none';
+    //         window.open(siteUrl + 'images/create/?url='
+    //         + encodeURIComponent(imageSelected.src)
+    //         + '&title='
+    //         + encodeURIComponent(document.title),
+    //         '_blank');
+    //     })
+    // })
+
 }
 
 // launch the bookmkarklet
