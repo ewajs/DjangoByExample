@@ -41,5 +41,14 @@
         </ul>
     {% endif %}
     <div id="content">{% block content %} {% endblock %}</div>
+    <script src="//cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const csrftoken = Cookies.get('csrftoken');
+            // DOM loaded
+            {% block domready %}
+            {% endblock %}
+        })
+    </script>
   </body>
 </html>
