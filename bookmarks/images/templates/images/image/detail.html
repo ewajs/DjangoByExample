@@ -56,19 +56,18 @@
         options.body = formData;
         // send HTTP request
         fetch(url, options).then(response => response.json()).then(data => {
-            if (data.status === 'ok')
-            {
-                // Update button
-                const previousActionIsLike = likeButton.dataset.action === 'like';
-                const currentAction = previousActionIsLike ? 'unlike' : 'like';
-                likeButton.dataset.action = currentAction;
-                likeButton.innerText = currentAction;
+            if (data.status !== 'ok') return; // Do nothing on error
+        
+            // Update button
+            const previousActionIsLike = likeButton.dataset.action === 'like';
+            const currentAction = previousActionIsLike ? 'unlike' : 'like';
+            likeButton.dataset.action = currentAction;
+            likeButton.innerText = currentAction;
 
-                // Update like count
-                const likeCount = document.querySelector('span.count .total');
-                const totalLikes = parseInt(likeCount.innerText);
-                likeCount.innerText = totalLikes + (previousActionIsLike ? 1 : -1);
-            }
+            // Update like count
+            const likeCount = document.querySelector('span.count .total');
+            const totalLikes = parseInt(likeCount.innerText);
+            likeCount.innerText = totalLikes + (previousActionIsLike ? 1 : -1);
         });
     });
 {% endblock %}
