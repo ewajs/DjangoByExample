@@ -182,3 +182,7 @@ ABSOLUTE_URL_OVERRIDES = {
 
 # Django debug toolbar
 INTERNAL_IPS = ['127.0.0.1',]
+
+REDIS_HOST = env('REDIS_HOST')
+REDIS_PORT = env('REDIS_PORT')
+REDIS_DB = env('REDIS_DB')
