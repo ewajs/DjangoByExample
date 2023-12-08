@@ -104,8 +104,8 @@ form p input {
     margin-bottom:10px;
     padding:10px 12px;
     border:0;
-    background:#efefef;
-    color:#666;
+    background:#68594a;
+    color:#dad3ca;
     border-radius:4px;
 }
 
@@ -172,7 +172,7 @@ ul.errorlist {
 }
 
 #sidebar ul li.selected {
-    background:#5993bb;
+    background:#68594a;
     border-radius:4px;
 }
 
@@ -232,14 +232,14 @@ ul.errorlist {
 .order-info {
     float:right;
     width:300px;
-    background:#efefef;
+    background:#e2dcd5;
     padding:10px 20px;
     color:#333;
-    border-bottom:4px solid #5993bb;
+    border-bottom:4px solid #68594a;
 }
 
 .order-info h3 {
-    color:#5993bb;
+    color:#68594a;
 }
 
 .order-info ul li {
