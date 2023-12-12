@@ -13,3 +13,4 @@ pyOpenSSL==23.3.0
 easy-thumbnails==2.8.5
 django-debug-toolbar==4.2.0
 redis==5.0.1
+celery==5.3.6

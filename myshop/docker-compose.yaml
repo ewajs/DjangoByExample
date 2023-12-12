@@ -1,0 +1,9 @@
+version: "3.3"
+
+services:
+  dj4be_myshop_rabbitmq:
+    image: rabbitmq:management
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
