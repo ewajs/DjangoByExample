@@ -10,6 +10,13 @@
         <div id="header">
             <a href="/" class="logo">Mosaic.it</a>
         </div>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li class="{{ message.tags }}">{{ message|safe }}<a href="#" class="close">x</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
         <div id="subheader">
             <div class="cart">
                 {% with total_items=cart|length %}
@@ -27,5 +34,14 @@
         <div id="content">
             {% block content %}{% endblock %}
         </div>
+        {% if messages %}
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('ul.messages a.close').forEach(
+                    el => el.addEventListener('click', () => el.parentElement.parentElement.removeChild(el.parentElement))
+                );
+            })
+        </script>
+        {% endif %}
     </body>
 </html>
