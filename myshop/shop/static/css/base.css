@@ -62,7 +62,7 @@ tbody tr:nth-child(odd) {
 }
 
 tbody tr.subtotal {
-    background:#ccc;
+    background:#c0bab2;
 }
 
 thead th, tbody tr.total {
