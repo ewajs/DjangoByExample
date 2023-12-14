@@ -166,3 +166,5 @@ cython_debug/
 
 cert.crt
 cert.key
+
+myshop/static
