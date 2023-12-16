@@ -85,7 +85,10 @@ table.cart {
 }
 
 table.cart img {
-  width: 180px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
 }
 
 tbody td.num {
@@ -196,7 +199,9 @@ ul.errorlist {
   overflow: hidden;
 }
 .product-list .item {
-  width: 25%;
+  width: 20%;
+  min-width: 250px;
+  height: 250px;
   padding: 10px 20px 10px 0;
   float: left;
   text-align: center;
@@ -205,7 +210,7 @@ ul.errorlist {
 
 .product-list .item img {
   width: 100%;
-  max-height: 600px;
+  height: 80%;
   object-fit: cover;
   margin-bottom: 8px;
 }
@@ -221,7 +226,7 @@ ul.errorlist {
 }
 
 .product-detail img {
-  width: 40%;
+  max-height: 50vh;
   float: left;
   padding: 0 20px 20px 0;
 }
@@ -302,8 +307,17 @@ ul.errorlist {
   float: left;
 }
 
+.recommendations .item {
+  width: 20%;
+  min-width: 250px;
+  height: 200px;
+  margin-right: 15px;
+}
+
 .recommendations img {
-  width: 200px;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
 }
 
 .recommendations p {
@@ -321,11 +335,20 @@ ul.errorlist {
 }
 
 .recommendations.cart .item {
+  width: 20%;
+  min-width: 150px;
+  height: unset;
   margin-right: 10px;
 }
 
 .recommendations.cart img {
-  width: 120px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.recommendations.cart .item p {
+    margin: 10px 0;
 }
 
 /* braintree hosted fields */
