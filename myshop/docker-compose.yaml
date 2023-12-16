@@ -7,3 +7,8 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+  dj4be_myshop_redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
