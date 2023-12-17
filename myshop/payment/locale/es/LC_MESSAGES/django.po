@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-17 11:47-0300\n"
-"PO-Revision-Date: 2023-12-17 14:53+0000\n"
+"POT-Creation-Date: 2023-12-17 12:09-0300\n"
+"PO-Revision-Date: 2023-12-17 15:09+0000\n"
 "Last-Translator:   <ezequiel.wajs@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -43,33 +43,37 @@ msgstr "Tu pago fue exitoso"
 msgid "Your payment has been processed successfully."
 msgstr "Tu pago fue procesado con éxito."
 
-#: payment/templates/payment/process.html:4
+#: payment/templates/payment/process.html:5
 msgid "Pay your order"
 msgstr "Pagá tu compra"
 
-#: payment/templates/payment/process.html:7
+#: payment/templates/payment/process.html:8
 msgid "Order summary"
 msgstr "Detalle"
 
-#: payment/templates/payment/process.html:11
+#: payment/templates/payment/process.html:12
 msgid "Image"
 msgstr "Imagen"
 
-#: payment/templates/payment/process.html:12
+#: payment/templates/payment/process.html:13
 msgid "Product"
 msgstr "Producto"
 
-#: payment/templates/payment/process.html:13
+#: payment/templates/payment/process.html:14
 msgid "Price"
 msgstr "Precio"
 
-#: payment/templates/payment/process.html:14
+#: payment/templates/payment/process.html:15
 msgid "Quantity"
 msgstr "Cantidad"
 
-#: payment/templates/payment/process.html:15
+#: payment/templates/payment/process.html:16
 msgid "Total"
 msgstr "Total"
+
+#: payment/templates/payment/process.html:50
+msgid "Pay now"
+msgstr "Pagar ahora"
 
 #: payment/urls.py:9
 msgid "process/"
@@ -80,6 +84,5 @@ msgid "completed/"
 msgstr "completado/"
 
 #: payment/urls.py:11
-#| msgid "Payment canceled"
 msgid "canceled/"
 msgstr "cancelado/"

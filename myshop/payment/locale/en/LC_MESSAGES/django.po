@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-17 11:47-0300\n"
+"POT-Creation-Date: 2023-12-17 12:09-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,32 +42,36 @@ msgstr ""
 msgid "Your payment has been processed successfully."
 msgstr ""
 
-#: payment/templates/payment/process.html:4
+#: payment/templates/payment/process.html:5
 msgid "Pay your order"
 msgstr ""
 
-#: payment/templates/payment/process.html:7
+#: payment/templates/payment/process.html:8
 msgid "Order summary"
 msgstr ""
 
-#: payment/templates/payment/process.html:11
+#: payment/templates/payment/process.html:12
 msgid "Image"
 msgstr ""
 
-#: payment/templates/payment/process.html:12
+#: payment/templates/payment/process.html:13
 msgid "Product"
 msgstr ""
 
-#: payment/templates/payment/process.html:13
+#: payment/templates/payment/process.html:14
 msgid "Price"
 msgstr ""
 
-#: payment/templates/payment/process.html:14
+#: payment/templates/payment/process.html:15
 msgid "Quantity"
 msgstr ""
 
-#: payment/templates/payment/process.html:15
+#: payment/templates/payment/process.html:16
 msgid "Total"
+msgstr ""
+
+#: payment/templates/payment/process.html:50
+msgid "Pay now"
 msgstr ""
 
 #: payment/urls.py:9
