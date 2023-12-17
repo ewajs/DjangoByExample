@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-17 10:57-0300\n"
+"POT-Creation-Date: 2023-12-17 11:47-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,47 +83,51 @@ msgstr ""
 msgid "Place order"
 msgstr ""
 
-#: orders/templates/orders/order/created.html:3
-#: orders/templates/orders/order/created.html:6
+#: orders/templates/orders/order/created.html:4
+#: orders/templates/orders/order/created.html:7
 msgid "Thank you"
 msgstr ""
 
-#: orders/templates/orders/order/created.html:7
+#: orders/templates/orders/order/created.html:8
 msgid "Your order has been successfully completed. Your order number is"
 msgstr ""
 
-#: orders/templates/orders/order/pdf.html:5
+#: orders/templates/orders/order/pdf.html:6
 msgid "Invoice no."
 msgstr ""
 
-#: orders/templates/orders/order/pdf.html:8
+#: orders/templates/orders/order/pdf.html:9
 msgid "Bill to"
 msgstr ""
 
-#: orders/templates/orders/order/pdf.html:15
+#: orders/templates/orders/order/pdf.html:16
 msgid "Items bought"
 msgstr ""
 
-#: orders/templates/orders/order/pdf.html:19
+#: orders/templates/orders/order/pdf.html:20
 msgid "Product"
 msgstr ""
 
-#: orders/templates/orders/order/pdf.html:20
+#: orders/templates/orders/order/pdf.html:21
 msgid "Price"
 msgstr ""
 
-#: orders/templates/orders/order/pdf.html:21
+#: orders/templates/orders/order/pdf.html:22
 msgid "Quantity"
 msgstr ""
 
-#: orders/templates/orders/order/pdf.html:22
+#: orders/templates/orders/order/pdf.html:23
 msgid "Cost"
 msgstr ""
 
-#: orders/templates/orders/order/pdf.html:51
+#: orders/templates/orders/order/pdf.html:52
 msgid "Paid"
 msgstr ""
 
-#: orders/templates/orders/order/pdf.html:51
+#: orders/templates/orders/order/pdf.html:52
 msgid "Pending payment"
+msgstr ""
+
+#: orders/urls.py:9
+msgid "create/"
 msgstr ""

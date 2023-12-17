@@ -8,19 +8,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-17 10:13-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2023-12-17 11:47-0300\n"
+"PO-Revision-Date: 2023-12-17 14:52+0000\n"
+"Last-Translator:   <ezequiel.wajs@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: myshop/settings.py:126
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: myshop/settings.py:127
 msgid "English"
 msgstr "Inglés"
 
-#: myshop/settings.py:127
+#: myshop/settings.py:128
 msgid "Spanish"
 msgstr "Español"
+
+#: myshop/urls.py:28
+msgid "cart/"
+msgstr "carrito/"
+
+#: myshop/urls.py:29
+msgid "orders/"
+msgstr "orden/"
+
+#: myshop/urls.py:30
+msgid "payment/"
+msgstr "pago/"
+
+#: myshop/urls.py:31
+msgid "coupons/"
+msgstr "cupones/"
