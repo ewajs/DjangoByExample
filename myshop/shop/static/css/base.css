@@ -206,6 +206,7 @@ ul.errorlist {
   float: left;
   text-align: center;
   line-height: 1.2;
+  overflow: hidden;
 }
 
 .product-list .item img {
@@ -213,7 +214,12 @@ ul.errorlist {
   height: 80%;
   object-fit: cover;
   margin-bottom: 8px;
+  transition: opacity 0.5s ease-in;
 }
+
+.product-list .item img:hover {
+  opacity: 0.7;
+} 
 
 .product-detail {
   text-align: justify;
