@@ -20,3 +20,4 @@ WeasyPrint==60.2
 django-rosetta==0.10.0
 django-parler==2.3
 django-braces==1.15.0
+django-embed-video==1.4.9
