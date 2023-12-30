@@ -42,8 +42,7 @@ class StudentCourseListView(LoginRequiredMixin, ListView):
         qs = super().get_queryset()
         return qs.filter(students__in=[self.request.user])
     
-# Check this, might need LoginRequiredMixin
-class StudentCourseDetailView(DetailView):
+class StudentCourseDetailView(LoginRequiredMixin, DetailView):
     model = Course
     template_name = 'students/course/detail.html'
     

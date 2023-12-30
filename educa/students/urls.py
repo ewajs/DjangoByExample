@@ -6,6 +6,7 @@ urlpatterns = [
     path('register/', views.StudentRegistrationView.as_view(), name='student_registration'),
     path('enroll-course/', views.StudentEnrollCourseView.as_view(), name='student_enroll_course'),
     path('courses/', views.StudentCourseListView.as_view(), name='student_course_list'),
+    # Both of these go the same view that will show either first module or the one provided in the URL
     path('course/<pk>/', views.StudentCourseDetailView.as_view(), name='student_course_detail'),
     path('course/<pk>/<module_id>/', views.StudentCourseDetailView.as_view(), name='student_course_detail_module'),
 ]
