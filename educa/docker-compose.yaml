@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  dj4be_educa_memcached:
+    image: memcached:latest
+    restart: always
+    ports:
+      - "11211:11211"
+    deploy:
+      resources:
+        limits:
+          memory: 64M
