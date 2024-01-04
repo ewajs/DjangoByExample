@@ -10,3 +10,8 @@ services:
       resources:
         limits:
           memory: 64M
+  dj4be_educa_redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
