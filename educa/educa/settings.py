@@ -147,3 +147,10 @@ CACHES = {
 
 # Debug Toolbar Allowed IPs
 INTERNAL_IPS = ['127.0.0.1']
+
+# DRFW
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
